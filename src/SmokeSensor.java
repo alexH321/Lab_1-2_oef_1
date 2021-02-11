@@ -2,10 +2,16 @@
 
 public class SmokeSensor extends Sensor{
     private boolean detectSmokeAndHeat; // if true, detecting both heat and smoke, else detecting only smoke
+    private String type;
 
-    public SmokeSensor(String kind, String loc, String n, boolean status, boolean detecting){
-        super(kind, loc, n, status);
+    public SmokeSensor(String loc, String n, boolean status, boolean detecting){
+        super(loc, n, status);
         detectSmokeAndHeat = detecting;
+        type = "Smoke";
+    }
+
+    public String getType(){
+        return type;
     }
 
     public boolean getDetectSmokeAndHeat(){

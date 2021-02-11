@@ -3,10 +3,16 @@
 public class COSensor extends Sensor{
 
     private float concentration;
+    private String type;
 
-    public COSensor(String kind, String loc, String n, boolean status, float amount){
-        super(kind, loc, n, status);
+    public COSensor(String loc, String n, boolean status, float amount){
+        super(loc, n, status);
         concentration = amount;
+        type = "CO";
+    }
+
+    public String getType(){
+        return type;
     }
 
     public float getConcentration() {
